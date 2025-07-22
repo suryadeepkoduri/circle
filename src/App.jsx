@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BackgroundBeams } from "./components/ui/background-beams";
+import { Button } from "./components/ui/button";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+        <div className="max-w-2xl mx-auto p-4">
+          <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+            Welcome to Circle
+          </h1>
+          <p></p>
+          <p className="text-neutral-500 max-w-lg mx-auto md:text-lg my-2 text-sm text-center relative z-10">
+            You’ve arrived a little early — we’re still building something
+            great. Come back soon!
+          </p>
+        </div>
+        <BackgroundBeams />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
